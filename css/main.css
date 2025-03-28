@@ -1,0 +1,468 @@
+/* Global Styles */
+.dosis {
+  font-family: "Dosis", sans-serif;
+}
+/* Navbar Styles */
+.navbar {
+  background-color: transparent !important; /* Fully transparent background */
+  transition: background-color 0.9s ease; /* Smooth transition for background color */
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: none; /* Remove shadow for full transparency */
+}
+
+/* Parallax effect for navbar */
+.navbar.parallax {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: none; /* Keep shadow removed for full transparency */
+}
+
+/* Adjust height of the logo */
+.navbar-brand {
+  height: 80px; /* Adjust height of the logo */
+  transition: height 0.5s ease; /* Smooth transition for height */
+}
+
+/* Adjust height of the logo when scrolled */
+.scrolled .navbar-brand {
+  height: 60px; /* Adjust height of the logo when scrolled */
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+  font-family: "Dosis", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000000; /* White text for contrast on transparent background */
+  transition: color 0.3s ease; /* Smooth transition for link color */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #5e5e5e; /* Slightly lighter white on hover */
+}
+
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+/* Mobile Styles */
+@media (max-width: 767.98px) {
+  .navbar-collapse {
+    text-align: right;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+
+/* Custom Styles for New Hero Section */
+body {
+  margin: 0;
+  background-color: #ffffff;
+}
+
+#new-hero {
+  padding: 50px 0;
+  background-color: #ffffff;
+}
+
+.hero-container{
+  max-width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text-container {
+  padding: 0px;
+}
+
+.text {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 900;
+  font-size: 7vw; /* Responsive font size */
+  letter-spacing: -0.01em;
+  line-height: 100%;
+  margin: 0px 0;
+  color: rgba(0, 0, 0, 0.9);
+  border-bottom: 1px solid #000000;
+  position: relative;
+}
+
+.text span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 108%;
+  height: 100%;
+  background-color: #ffffff; /* Pointer color matches background */
+  color: #ffffff;
+  clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+  transition: clip-path cubic-bezier(.1, .5, .5, 1) 0.4s, background-color 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.text:hover span {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  background-color: #FF0062; /* Changes to a new color matching pointer */
+}
+
+.text a {
+  color: inherit; /* Match text color */
+  text-decoration: none;
+}
+
+.text a:hover {
+  color: inherit; /* Ensure no color change on hover */
+}
+
+.hero-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: 30px; 
+  padding: 10px;
+}
+
+/* Ensure responsiveness on smaller screens */
+@media (max-width: 768px) {
+.hero-text,
+.hero-image
+.hero-text h1{
+text-align: left; /* Center align text and image on smaller screens */
+padding-right: 0; /* Remove padding for better layout */
+}
+}
+/* Assuming the class name for the image is "hero-image" */
+.hero-image {
+  margin-top: 30px; /* Adjust the value as needed to move the image down */
+
+}
+
+.about {
+  font-family: "Dosis", sans-serif;
+  font-size: 30px; /* Adjust font size as needed */
+  font-weight: 400; /* Adjust font weight as needed */
+  color: white;
+  padding: 100px;
+  background: hsla(336, 100%, 50%, 1);
+  background: linear-gradient(90deg, hsla(336, 100%, 50%, 1) 4%, hsla(217, 100%, 50%, 1) 100%);
+  background: -moz-linear-gradient(90deg, hsla(336, 100%, 50%, 1) 4%, hsla(217, 100%, 50%, 1) 100%);
+  background: -webkit-linear-gradient(90deg, hsla(336, 100%, 50%, 1) 4%, hsla(217, 100%, 50%, 1) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FF0066", endColorstr="#0062FF", GradientType=1 );
+  }
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 576px) {
+  .hero-text h1 {
+    font-size: 2.375rem; /* 38px */
+  }
+
+  .hero-text h2 {
+    font-size: 2.1875rem; /* 35px */
+  }
+
+  .hero-text p {
+    font-size: 1.125rem; /* 18px */
+  }
+
+  .hero-image {
+    width: 100%; /* Ensure the image takes full width */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 0; /* Ensure no margin issues on small screens */
+    margin-top: 0.625rem; /* 10px */
+  }
+
+  .about {
+    text-align: center; /* Center align text on extra small screens */
+    padding: 3.125rem 1.25rem; /* 50px 20px */
+    font-size: 1.25rem; /* 20px */
+  }
+}
+
+/* Small devices (landscape phones, 576px to 767.98px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .about {
+    text-align: center; /* Center align text on small screens */
+    padding: 3.125rem 1.25rem; /* 50px 20px */
+    font-size: 2rem; /* 32px */
+  }
+
+  .hero-text h1 {
+    font-size: 2.625rem; /* 42px */
+  }
+
+  .hero-text h2 {
+    font-size: 2.3125rem; /* 37px */
+  }
+
+  .hero-text p {
+    font-size: 1.25rem; /* 20px */
+  }
+
+  .hero-image,
+  .footer {
+    text-align: left; /* Align text to the left for slightly larger screens */
+    padding-right: 0; /* Remove padding for better layout */
+  }
+}
+
+/* Targeting screens of width 734px and below */
+@media (max-width: 734px) {
+  .hero-text h1 {
+    font-size: 2.5rem; /* 40px */
+  }
+
+  .hero-text h2 {
+    font-size: 2.1875rem; /* 35px */
+  }
+
+  .hero-text p {
+    font-size: 1.125rem; /* 18px */
+  }
+}
+
+/* Medium devices (tablets, exactly 768px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .about {
+    text-align: center; /* Center align text on medium screens */
+    padding: 3rem 1.5rem; /* Adjust padding for 768px screens */
+    font-size: 1.75rem; /* Slightly smaller for better readability */
+  }
+
+  .hero-text h1 {
+    font-size: 2.25rem; /* Reduce font size to 36px */
+  }
+
+  .hero-text h2 {
+    font-size: 2rem; /* Reduce font size to 32px */
+  }
+
+  .hero-text p {
+    font-size: 1rem; /* Reduce font size to 16px */
+  }
+
+  .hero-image {
+    width: 100%; /* Ensure the image takes full width */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 0; /* Ensure no margin issues */
+    margin-top: 1.25rem; /* Add some margin for spacing */
+  }
+
+  .footer {
+    text-align: left; /* Align footer text to the left */
+    padding-right: 0; /* Remove padding for better layout */
+  }
+}
+
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .about {
+    text-align: center; /* Center align text on large screens */
+  }
+
+  .hero-image,
+  .hero-text h1,
+  .hero-text h2,
+  .hero-text p,
+  .footer {
+    text-align: left; /* Align text to the left for large screens */
+    padding-right: 0; /* Remove padding for better layout */
+  }
+}
+
+/* Large tablets and small laptops (1024px) */
+@media (min-width: 1024px) and (max-width: 1199.98px) {
+  .about {
+    text-align: center; /* Center align text on 1024px screens */
+    padding: 4rem 2rem; /* Adjust padding for larger tablets */
+    font-size: 1.875rem; /* Slightly larger font size (30px) */
+  }
+
+  .hero-text h1 {
+    font-size: 2.75rem; /* 44px */
+  }
+
+  .hero-text h2 {
+    font-size: 2.5rem; /* 40px */
+  }
+
+  .hero-text p {
+    font-size: 1.125rem; /* 18px */
+  }
+
+  .hero-image {
+    width: 100%; /* Ensure the image takes full width */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 0; /* No margin issues */
+    margin-top: 1.5rem; /* Add more margin for spacing */
+  }
+
+  .footer {
+    text-align: left; /* Align footer text to the left */
+    padding-right: 0; /* Remove padding for better layout */
+  }
+}
+
+
+.about-btn {
+font-family: "Dosis", sans-serif;
+font-size: 19px; /* Adjust font size as needed */
+font-weight: 400; /* Adjust font weight as needed */
+}
+/* Custom CSS for form elements */
+.form-control {
+font-family: "Dosis", sans-serif;
+font-size: 16px; /* Adjust font size as needed */
+font-weight: 300; /* Adjust font weight as needed */
+}
+/* Custom CSS for form button */
+form button.btn {
+font-family: "Dosis", sans-serif;
+font-size: 20px; /* Adjust font size as needed */
+font-weight: 400; /* Adjust font weight as needed */
+}
+/* Custom CSS for h2 element within the contact section */
+#contact h2 {
+font-family: "Dosis", sans-serif;
+font-size: 30px; /* Adjust font size as needed */
+font-weight: 600; /* Adjust font weight as needed */
+margin-bottom: 20px; /* Adjust margin bottom as needed */
+}
+/* Footer Styles */
+footer {
+  background-color: #0062FF;
+  color: #000000;
+  padding: 10px;
+  font-family: "Dosis", sans-serif;
+  font-weight: 500;
+}
+.footer-column {
+  max-width: 24%;
+}
+.social-link {
+  color: white;
+  font-size: 20px;
+  margin-right: 0px;
+}
+/* Media Queries */
+@media (max-width: 768px) {
+  .navbar-brand {
+      font-size: 1.2rem;
+  }
+  .navbar-nav .nav-link {
+      font-size: 1rem;
+  }
+}
+@media (max-width: 576px) {
+  .navbar-brand {
+      font-size: 1rem;
+  }
+  .navbar-nav .nav-link {
+      font-size: 0.9rem;
+  }
+}
+/* Custom Styles for Removing Gutters */
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+.no-gutters [class^="col-"],
+.no-gutters [class*=" col-"] {
+  padding-right: 0;
+  padding-left: 0;
+}
+.back-top {
+  position: fixed;
+  bottom: 20px; /* Adjust the distance from the bottom as needed */
+  right: 20px; /* Adjust the distance from the right as needed */
+  background-color: transparent; /* Transparent background */
+  color: #fff; /* White arrow color */
+  padding: 10px;
+  border-radius: 50%;
+  border: none; /* Remove border */
+  cursor: pointer; /* Add pointer cursor */
+}
+.back-top i {
+  font-size: 40px; /* Adjust the size of the arrow icon */
+}
+.back-top:hover {
+  background-color: rgba(255, 255, 255, 0.0); /* Semi-transparent white on hover */
+}
+/* Custom CSS for changing the hover color of the button */
+.btn-outline-dark:hover {
+color: #fff; /* Change text color on hover */
+background-color: #FF0066; /* Change background color on hover */
+border-color: #FF0066; /* Change border color on hover */
+}
+/* Custom cursor */
+.custom-cursor {
+  width: 20px;
+  height: 20px;
+  background-color: #FF0066;
+  border-radius: 50%;
+  position: absolute;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease-out, width 0.3s ease, height 0.3s ease, background-color 0.3s ease, opacity 0.3s ease;
+  z-index: 10000;
+}
+.cursor-hover {
+  width: 200px; /* Shrinks to a smaller dot */
+  height: 200px;
+  background-color: #0062FF; /* #0062FF color */
+  opacity: 0.8; /* More opaque (80% visible) */
+  transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease, opacity 0.3s ease;
+}
+body {
+  cursor: none; /* Hide default cursor */
+}
+
+/* Container for the image and text */
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* The hover text */
+.hover-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Make it cover the entire width of the image */
+  height: 100%; /* Make it cover the entire height of the image */
+  background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent background covering full image */
+  color: rgb(0, 0, 0);
+  padding: 20px; /* Optional: control padding for the text inside the background */
+  font-family: "Dosis", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: flex-start; /* Align text to the top */
+  justify-content: flex-start; /* Align text to the left */
+  box-sizing: border-box; /* Ensure padding doesn't affect width/height */
+}
+
+/* Show text on hover */
+.image-container:hover .hover-text {
+  opacity: 1;
+}
