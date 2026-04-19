@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Badeen+Display&family=Bungee&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles_mj.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="gallery">
+        <ul class="cards">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+
+        </ul>
+        <div class="actions">
+            <button type="button" class="prev btn btn-outline-primary">Prev</button>
+            <button type="button" class="next btn btn-outline-primary">Next</button>
+        </div>
+
+        <a href="index.html" class="back-icon" aria-label="Go back home">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon">
+    <line x1="19" y1="12" x2="5" y2="12" />
+    <polyline points="12 19 5 12 12 5" />
+  </svg>
+</a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+    
+    <script>gsap.registerPlugin(ScrollTrigger);
+
+        let iteration = 0; // gets iterated when we scroll all the way to the end or start and wraps around - allows us to smoothly continue the playhead scrubbing in the correct direction.
+        
+        const spacing = 0.1,    // spacing of the cards (stagger)
+            snap = gsap.utils.snap(spacing), // we'll use this to snap the playhead on the seamlessLoop
+            cards = gsap.utils.toArray('.cards li'),
+            seamlessLoop = buildSeamlessLoop(cards, spacing),
+            scrub = gsap.to(seamlessLoop, { // we reuse this tween to smoothly scrub the playhead on the seamlessLoop
+                totalTime: 0,
+                duration: 0.5,
+                ease: "power3",
+                paused: true
+            }),
+            trigger = ScrollTrigger.create({
+                start: 0,
+                onUpdate(self) {
+                    if (self.progress === 1 && self.direction > 0 && !self.wrapping) {
+                        wrapForward(self);
+                    } else if (self.progress < 1e-5 && self.direction < 0 && !self.wrapping) {
+                        wrapBackward(self);
+                    } else {
+                scrub.vars.totalTime = snap((iteration + self.progress) * seamlessLoop.duration());
+                        scrub.invalidate().restart(); // to improve performance, we just invalidate and restart the same tween. No need for overwrites or creating a new tween on each update.
+                        self.wrapping = false;
+                    }
+                },
+                end: "+=3000",
+                pin: ".gallery"
+            });
+        
+        function wrapForward(trigger) { // when the ScrollTrigger reaches the end, loop back to the beginning seamlessly
+            iteration++;
+            trigger.wrapping = true;
+            trigger.scroll(trigger.start + 1);
+        }
+        
+        function wrapBackward(trigger) { // when the ScrollTrigger reaches the start again (in reverse), loop back to the end seamlessly
+            iteration--;
+            if (iteration < 0) { // to keep the playhead from stopping at the beginning, we jump ahead 10 iterations
+                iteration = 9;
+                seamlessLoop.totalTime(seamlessLoop.totalTime() + seamlessLoop.duration() * 10);
+            scrub.pause(); // otherwise it may update the totalTime right before the trigger updates, making the starting value different than what we just set above. 
+            }
+            trigger.wrapping = true;
+            trigger.scroll(trigger.end - 1);
+        }
+        
+        function scrubTo(totalTime) { // moves the scroll position to the place that corresponds to the totalTime value of the seamlessLoop, and wraps if necessary.
+            let progress = (totalTime - seamlessLoop.duration() * iteration) / seamlessLoop.duration();
+            if (progress > 1) {
+                wrapForward(trigger);
+            } else if (progress < 0) {
+                wrapBackward(trigger);
+            } else {
+                trigger.scroll(trigger.start + progress * (trigger.end - trigger.start));
+            }
+        }
+        
+        document.querySelector(".next").addEventListener("click", () => scrubTo(scrub.vars.totalTime + spacing));
+        document.querySelector(".prev").addEventListener("click", () => scrubTo(scrub.vars.totalTime - spacing));
+        
+        
+        
+        
+        function buildSeamlessLoop(items, spacing) {
+            let overlap = Math.ceil(1 / spacing), // number of EXTRA animations on either side of the start/end to accommodate the seamless looping
+                startTime = items.length * spacing + 0.5, // the time on the rawSequence at which we'll start the seamless loop
+                loopTime = (items.length + overlap) * spacing + 1, // the spot at the end where we loop back to the startTime 
+                rawSequence = gsap.timeline({paused: true}), // this is where all the "real" animations live
+                seamlessLoop = gsap.timeline({ // this merely scrubs the playhead of the rawSequence so that it appears to seamlessly loop
+                    paused: true,
+                    repeat: -1, // to accommodate infinite scrolling/looping
+                    onRepeat() { // works around a super rare edge case bug that's fixed GSAP 3.6.1
+                        this._time === this._dur && (this._tTime += this._dur - 0.01);
+                    }
+                }),
+                l = items.length + overlap * 2,
+                time = 0,
+                i, index, item;
+        
+            // set initial state of items
+            gsap.set(items, {xPercent: 400, opacity: 0,	scale: 0});
+        
+            // now loop through and create all the animations in a staggered fashion. Remember, we must create EXTRA animations at the end to accommodate the seamless looping.
+            for (i = 0; i < l; i++) {
+                index = i % items.length;
+                item = items[index];
+                time = i * spacing;
+                rawSequence.fromTo(item, {scale: 0, opacity: 0}, {scale: 1, opacity: 1, zIndex: 100, duration: 0.5, yoyo: true, repeat: 1, ease: "power1.in", immediateRender: false}, time)
+                           .fromTo(item, {xPercent: 400}, {xPercent: -400, duration: 1, ease: "none", immediateRender: false}, time);
+                i <= items.length && seamlessLoop.add("label" + i, time); // we don't really need these, but if you wanted to jump to key spots using labels, here ya go.
+            }
+            
+            // here's where we set up the scrubbing of the playhead to make it appear seamless. 
+            rawSequence.time(startTime);
+            seamlessLoop.to(rawSequence, {
+                time: loopTime,
+                duration: loopTime - startTime,
+                ease: "none"
+            }).fromTo(rawSequence, {time: overlap * spacing + 1}, {
+                time: startTime,
+                duration: startTime - (overlap * spacing + 1),
+                immediateRender: false,
+                ease: "none"
+            });
+            return seamlessLoop;
+        }
+        </script>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+    const listItems = document.querySelectorAll(".cards li");
+
+    listItems.forEach((li, index) => {
+        const img = document.createElement("img");
+        img.src = `img/img${index + 1}.png`; // Asegúrate de que el nombre de los archivos coincida
+        img.alt = `Imagen ${index + 1}`;
+        img.style.width = "100%"; // Ajusta el tamaño según necesites
+        img.style.height = "100%";
+        img.style.marginRight = "10px";
+
+        li.prepend(img); // Agrega la imagen antes del texto
+    });
+});
+
+
+</script>
+
+</body>
+</html>

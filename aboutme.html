@@ -1,0 +1,163 @@
+         <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Galería Masonry - Florencia Paramidani</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Badeen+Display&family=Bungee&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<style>
+  #aboutme {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 1rem;
+    min-height: 80vh;
+    font-family: "Lato", sans-serif;
+  }
+
+  #aboutme .content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    width: 100%;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  #aboutme .about-text {
+    font-family: "Lato", sans-serif !important;
+    flex: 1 1 500px;
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: #000000;
+    line-height: 1.6;
+    text-align: left;
+    max-width: 900px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    text-transform: uppercase; /* 👈 esta línea pone todo en mayúscula */
+  }
+
+  #aboutme .about-image {
+    flex: 0 0 350px;
+    max-width: 350px;
+  }
+
+  #aboutme .about-image img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  display: block;
+  margin-bottom: 80px;
+}
+
+#aboutme .about-image img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  #aboutme {
+    padding: 2rem 1rem;
+    min-height: auto;
+  }
+
+  #aboutme .content-wrapper {
+    flex-direction: column;
+    align-items: center; /* mantiene el contenido centrado */
+  }
+
+  #aboutme .about-text {
+    max-width: 100%;
+    font-size: 1.1rem;
+    text-align: left; /* 👈 cambia esto de center a left */
+  }
+
+  #aboutme .about-image {
+    max-width: 250px;
+    margin: 1.5rem auto 0;
+  }
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #222;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.back-link:hover {
+  color: #007BFF; /* Cambia a azul elegante o el color que uses */
+  border-bottom-color: #007BFF;
+}
+
+.back-link svg {
+  width: 1rem;
+  height: 1rem;
+  stroke: currentColor;
+  transition: transform 0.3s ease;
+}
+
+.back-link:hover svg {
+  transform: translateX(-4px);
+}
+
+.back-icon {
+  display: inline-block;
+  margin-top: 2rem;
+  text-decoration: none;
+  padding-left: 0.2rem;
+}
+
+.arrow-icon {
+  width: 40px;
+  height: 40px;
+  stroke: #000;
+  transition: stroke 0.3s ease, transform 0.3s ease;
+}
+
+.back-icon:hover .arrow-icon {
+  stroke: #007BFF;
+  transform: translateX(-5px);
+}
+</style>
+
+<section id="aboutme">
+  <div class="content-wrapper">
+    <div class="about-image">
+      <img src="img/flor_2.png" alt="Florencia Paramidani">
+    </div>
+    <div class="about-text">
+      <p>
+        Hi, I'm Florencia Paramidani — a multidisciplinary Graphic Designer, Frontend Developer, and AI-based Visual Creator with over 10 years of experience turning ideas into powerful visual stories.<br><br>
+        I specialize in branding, UI design, web development, and AI-generated imagery, combining a minimalist aesthetic with bold creativity. My work is grounded in strategy, shaped by design thinking, and driven by technology.<br><br>
+        From e-commerce platforms to cultural projects, I've helped businesses and artists stand out with visuals that are smart, functional, and beautiful.<br><br>
+        I'm passionate about building meaningful digital experiences — always aiming for clean code, strong concepts, and visuals that leave a mark.<br><br>
+        If you're looking for a designer who thinks beyond trends, creates with purpose, and isn’t afraid to push the limits of design and tech — <a href="mailto:florparamidani@gmail.com">Let’s connect.</a>
+      </p>
+ <a href="index.html" class="back-icon" aria-label="Go back home">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2.5"
+       stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" class="arrow-icon">
+    <line x1="19" y1="12" x2="5" y2="12" />
+    <polyline points="12 19 5 12 12 5" />
+  </svg>
+</a>
+     </div>
+  </div>
+  
+</section>

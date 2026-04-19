@@ -1,0 +1,91 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+	background: #000000;
+	min-height: 100vh;
+	padding: 0;
+	margin: 0;
+}
+.gallery {
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.cards {
+	position: absolute;
+	width: 14rem;
+	height: 18rem;
+	top: 20%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.cards li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 600px; /* Nuevo ancho */
+    height: 600px; /* Nueva altura */
+    border-radius: 0.8rem;
+    overflow: hidden; /* Oculta el exceso de imagen */
+}
+.cards li img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor sin deformarse */
+    border-radius: 0.8rem; /* Opcional, para mantener la misma forma */
+}
+
+.actions {
+	position: absolute;
+	bottom: 25px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+button {
+  display:inline-block;
+  outline: none;
+  border: none;
+  padding: 8px 14px;
+  font-family: "Lato", sans-serif;
+  font-weight:400;
+  text-transform: uppercase;
+
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 18px;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+
+  .back-icon {
+  display: inline-flex;
+  align-items: center;
+  margin: 3rem 0 0 1rem; /* arriba y a la izquierda */
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.arrow-icon {
+  width: 48px;
+  height: 48px;
+  stroke: #ffffff;
+  transition: stroke 0.3s ease, transform 0.3s ease;
+}
+
+.back-icon:hover .arrow-icon {
+  stroke: #007BFF; /* o el color que prefieras */
+  transform: translateX(-4px);
+}
