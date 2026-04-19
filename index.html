@@ -42,69 +42,138 @@
   </section>
 
   <!-- GALERÍA -->
-  <section id="portfolio" class="masonry">
-    <!-- Repetí o agregá las 16 imágenes como desees -->
-    <!-- Aquí van 10 como ejemplo, podés duplicar para llegar a 16 -->
-    <div class="masonry-item wide">
-      <a href="proyecto1.html">
-        <img src="img/fdo.jpg" class="gallery-img" alt="Obra 1">
-      </a>
-    </div>
-    <div class="masonry-item">
-      <a href="proyecto2.html">
-        <img src="img/inc.jpg" class="gallery-img" alt="Obra 2">
-      </a>
-    </div>
-    <div class="masonry-item tall">
-      <a href="proyecto3.html">
-        <img src="img/3q.jpg" class="gallery-img" alt="Obra 3">
-      </a>
-    </div>
-    <div class="masonry-item">
-      <a href="proyecto4.html">
-        <img src="img/logos.jpg" class="gallery-img" alt="Obra 4">
-      </a>
-    </div>
-    <div class="masonry-item">
-      <a href="proyecto5.html">
-        <img src="img/ache.jpg" class="gallery-img" alt="Obra 5">
-      </a>
-    </div>
-    <div class="masonry-item big">
-      <a href="proyecto6.html">
-        <img src="img/shols.jpg" class="gallery-img" alt="Obra 6">
-      </a>
-    </div>
-    <div class="masonry-item">
-      <a href="proyecto7.html">
-        <img src="img/dib_a.jpg" class="gallery-img" alt="Obra 7">
-      </a>
-    </div>
-    <div class="masonry-item">
-      <a href="proyecto8.html">
-        <img src="img/dib_b.jpg" class="gallery-img" alt="Obra 8">
-      </a>
-    </div>
-    <div class="masonry-item wide">
-      <a href="proyecto9.html">
-        <img src="img/dib_c.jpg" class="gallery-img" alt="Obra 9">
-      </a>
-    </div>
-    <div class="masonry-item tall">
-      <a href="proyecto10.html">
-        <img src="img/dib_d.jpg" class="gallery-img" alt="Obra 10">
-      </a>
+  <div id="portfolio">
+    <div class="portfolio-filters">
+      <button class="filter-btn active" data-filter="all">ALL</button>
+      <button class="filter-btn" data-filter="branding">BRANDING</button>
+      <button class="filter-btn" data-filter="identidad">IDENTIDAD VISUAL</button>
+      <button class="filter-btn" data-filter="ilustracion">ILUSTRACIÓN</button>
     </div>
 
-     <div class="masonry-item tall">
-      <a href="proyecto11.html">
-        <img src="img/dib_e.jpg" class="gallery-img" alt="Obra 10">
-      </a>
-    </div>
-
-    <!-- Agregá más ítems hasta 16 -->
-
-  </section>
+    <section class="masonry">
+      <div class="masonry-item wide" data-category="branding">
+        <div class="item-inner">
+          <a href="proyecto1.html">
+            <img src="img/fdo.jpg" class="gallery-img" alt="Entrepreneurial development contest: LGBTIQ identity">
+          </a>
+          <div class="item-overlay">
+            <span class="item-title">Entrepreneurial development contest: LGBTIQ identity</span>
+            <span class="item-category">Branding</span>
+          </div>
+        </div>
+      </div>
+      <div class="masonry-item" data-category="identidad">
+        <div class="item-inner">
+          <a href="proyecto2.html">
+            <img src="img/inc.jpg" class="gallery-img" alt="Identity for an electronic music production company">
+          </a>
+          <div class="item-overlay">
+            <span class="item-title">Identity for an electronic music production company</span>
+            <span class="item-category">Identidad Visual</span>
+          </div>
+        </div>
+      </div>
+      <div class="masonry-item tall" data-category="identidad">
+        <div class="item-inner">
+          <a href="proyecto3.html">
+            <img src="img/3q.jpg" class="gallery-img" alt="Identity for a restaurant in Puerto Madero">
+          </a>
+          <div class="item-overlay">
+            <span class="item-title">Identity for a restaurant in Puerto Madero</span>
+            <span class="item-category">Identidad Visual</span>
+          </div>
+        </div>
+      </div>
+      <div class="masonry-item" data-category="identidad">
+        <div class="item-inner">
+          <a href="proyecto4.html">
+            <img src="img/logos.jpg" class="gallery-img" alt="A collection of logos">
+          </a>
+          <div class="item-overlay">
+            <span class="item-title">A collection of logos</span>
+            <span class="item-category">Identidad Visual</span>
+          </div>
+        </div>
+      </div>
+      <div class="masonry-item" data-category="identidad">
+        <div class="item-inner">
+          <a href="proyecto5.html">
+            <img src="img/ache.jpg" class="gallery-img" alt="Identity for a visual artist: ACHE">
+          </a>
+          <div class="item-overlay">
+            <span class="item-title">Identity for a visual artist: ACHE</span>
+            <span class="item-category">Identidad Visual</span>
+          </div>
+        </div>
+      </div>
+      <div class="masonry-item big" data-category="branding">
+        <div class="item-inner">
+          <a href="proyecto6.html">
+            <img src="img/shols.jpg" class="gallery-img" alt="Signature, identity for a DJ">
+          </a>
+          <div class="item-overlay">
+            <span class="item-title">Signature, identity for a DJ</span>
+            <span class="item-category">Branding</span>
+          </div>
+        </div>
+      </div>
+      <div class="masonry-item" data-category="ilustracion">
+        <div class="item-inner">
+          <a href="proyecto7.html">
+            <img src="img/dib_a.jpg" class="gallery-img" alt="Hand-drawn vector art">
+          </a>
+          <div class="item-overlay">
+            <span class="item-title">Hand-drawn vector art</span>
+            <span class="item-category">Ilustración</span>
+          </div>
+        </div>
+      </div>
+      <div class="masonry-item" data-category="ilustracion">
+        <div class="item-inner">
+          <a href="proyecto8.html">
+            <img src="img/dib_b.jpg" class="gallery-img" alt="Handcrafted digital art">
+          </a>
+          <div class="item-overlay">
+            <span class="item-title">Handcrafted digital art</span>
+            <span class="item-category">Ilustración</span>
+          </div>
+        </div>
+      </div>
+      <div class="masonry-item wide" data-category="ilustracion">
+        <div class="item-inner">
+          <a href="proyecto9.html">
+            <img src="img/dib_c.jpg" class="gallery-img" alt="Handcrafted digital art">
+          </a>
+          <div class="item-overlay">
+            <span class="item-title">Handcrafted digital art</span>
+            <span class="item-category">Ilustración</span>
+          </div>
+        </div>
+      </div>
+      <div class="masonry-item tall" data-category="ilustracion">
+        <div class="item-inner">
+          <a href="proyecto10.html">
+            <img src="img/dib_d.jpg" class="gallery-img" alt="Handcrafted digital art">
+          </a>
+          <div class="item-overlay">
+            <span class="item-title">Handcrafted digital art</span>
+            <span class="item-category">Ilustración</span>
+          </div>
+        </div>
+      </div>
+      <div class="masonry-item tall" data-category="ilustracion">
+        <div class="item-inner">
+          <a href="proyecto11.html">
+            <img src="img/dib_e.jpg" class="gallery-img" alt="Handcrafted digital art">
+          </a>
+          <div class="item-overlay">
+            <span class="item-title">Handcrafted digital art</span>
+            <span class="item-category">Ilustración</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
   <!-- FOOTER -->
 <footer id="contact" style="background: #fff; padding: 2rem 0; text-align: center; box-shadow: 0 -2px 10px rgba(0,0,0,0.05);">
   <div style="font-size: 1.5rem; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
@@ -130,6 +199,27 @@
 
     burger.addEventListener('click', () => {
       navLinks.classList.toggle('active');
+    });
+
+    // Portfolio filters
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const masonryItems = document.querySelectorAll('.masonry-item');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.dataset.filter;
+
+        masonryItems.forEach(item => {
+          if (filter === 'all' || item.dataset.category === filter) {
+            item.classList.remove('filtered-out');
+          } else {
+            item.classList.add('filtered-out');
+          }
+        });
+      });
     });
   </script>
 
