@@ -455,3 +455,21 @@
     .mj-item video { width: 100%; height: 320px; object-fit: cover; display: block; }
     .mj-cta { font-family: 'Inter Tight', sans-serif; font-weight: 300; font-size: 12px; color: #FF4FA3; letter-spacing: 0.3em; text-decoration: none; border-bottom: 1px solid rgba(255,79,163,0.3); padding-bottom: 2px; transition: border-color 0.3s ease; }
     .mj-cta:hover { border-color: #FF4FA3; }
+
+@media (max-width: 768px) {
+  #nav-links {
+    background: rgba(255,255,255,0.97);
+    padding: 16px 24px;
+    border-radius: 8px;
+  }
+  #nav-links a {
+    color: #111 !important;
+    display: block;
+    padding: 10px 0;
+    letter-spacing: 0.2em;
+    font-size: 13px;
+  }
+  #nav-links li {
+    list-style: none;
+  }
+}
