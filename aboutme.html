@@ -1,82 +1,48 @@
-         <!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Galería Masonry - Florencia Paramidani</title>
+  <title>About — Florencia Paramidani</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="main.css">
   <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <style>
-.about-section { display: flex; align-items: center; gap: 64px; padding: 80px 40px; max-width: 1000px; margin: 0 auto; }
-.about-img img { width: 280px; border-radius: 4px; object-fit: cover; }
-.about-text { flex: 1; }
-.about-label { font-family: 'Inter Tight', sans-serif; font-weight: 300; font-size: 11px; letter-spacing: 0.4em; color: #FF4FA3; display: block; margin-bottom: 16px; }
-.about-name { font-family: 'Dosis', sans-serif; font-weight: 200; font-size: 42px; letter-spacing: 0.15em; color: #111; margin: 0 0 32px; }
-.about-text p { font-family: 'Inter Tight', sans-serif; font-weight: 300; font-size: 15px; line-height: 1.85; color: #333; margin: 0 0 20px; }
-.about-text strong { font-weight: 500; color: #111; }
-.about-text a { color: #FF4FA3; text-decoration: none; border-bottom: 1px solid rgba(255,79,163,0.3); }
-.about-text a:hover { border-color: #FF4FA3; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter Tight', sans-serif; background: #fff; }
+    #aboutme { padding: 120px 40px 80px; }
+    .about-section { display: flex; flex-direction: row; align-items: flex-start; gap: 60px; max-width: 1000px; margin: 0 auto; }
+    .about-img img { width: 280px; border-radius: 4px; object-fit: cover; display: block; }
+    .about-text { flex: 1; }
+    .about-label { font-family: 'Inter Tight', sans-serif; font-weight: 300; font-size: 11px; letter-spacing: 0.4em; color: #FF4FA3; display: block; margin-bottom: 16px; text-transform: uppercase; }
+    .about-name { font-family: 'Dosis', sans-serif; font-weight: 200; font-size: 42px; letter-spacing: 0.15em; color: #111; margin: 0 0 32px; }
+    .about-text p { font-weight: 300; font-size: 15px; line-height: 1.85; color: #333; margin: 0 0 20px; }
+    .about-text strong { font-weight: 500; color: #111; }
+    .about-text a.mailto { color: #FF4FA3; text-decoration: none; border-bottom: 1px solid rgba(255,79,163,0.3); }
+    .back-icon { display: inline-block; margin-top: 2rem; text-decoration: none; }
+    .arrow-icon { width: 40px; height: 40px; stroke: #000; transition: stroke 0.3s ease, transform 0.3s ease; }
+    .back-icon:hover .arrow-icon { stroke: #FF4FA3; transform: translateX(-5px); }
 
-.back-icon {
-  display: inline-block;
-  margin-top: 2rem;
-  text-decoration: none;
-  padding-left: 0.2rem;
-}
-
-.arrow-icon {
-  width: 40px;
-  height: 40px;
-  stroke: #000;
-  transition: stroke 0.3s ease, transform 0.3s ease;
-}
-
-.back-icon:hover .arrow-icon {
-  stroke: #FF4FA3;
-  transform: translateX(-5px);
-}
-
-@media (max-width: 768px) {
-  #aboutme { padding: 60px 20px; }
-  .about-section {
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
-    padding: 0;
-  }
-  .about-img {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    order: -1;
-  }
-  .about-img img {
-    width: 160px !important;
-    height: 160px !important;
-    border-radius: 50% !important;
-    object-fit: cover;
-  }
-  .about-text {
-    width: 100%;
-    order: 1;
-    word-break: break-word;
-    overflow-wrap: break-word;
-  }
-  .about-text p {
-    font-size: 14px;
-    line-height: 1.7;
-  }
-  .about-name { font-size: 26px; }
-}
+    @media (max-width: 768px) {
+      #aboutme { padding: 80px 20px 60px; }
+      .about-section { flex-direction: column !important; align-items: center !important; gap: 24px !important; }
+      .about-img { width: 100% !important; text-align: center !important; }
+      .about-img img { width: 150px !important; height: 150px !important; border-radius: 50% !important; margin: 0 auto !important; }
+      .about-text { width: 100% !important; }
+      .about-name { font-size: 28px !important; }
+      .about-text p { font-size: 14px !important; line-height: 1.7 !important; }
+    }
   </style>
 </head>
 <body>
-
-<section id="aboutme">
-  <div class="about-section">
-    <div class="about-text">
+  <section id="aboutme">
+    <div class="about-section">
+      <div class="about-img">
+        <img src="img/flor_2.png" alt="Florencia Paramidani">
+      </div>
+      <div class="about-text">
+        <span class="about-label">About</span>
+        <h1 class="about-name">Florencia Paramidani</h1>
         <p>Hi, I'm Florencia — a Graphic Designer, Frontend Developer, and AI Visual Creator based in Buenos Aires.</p>
         <p>With over 10 years of experience, I've built my career through reinvention: from editorial and branding to web development, from Django to Next.js, from Photoshop to Midjourney. I don't just follow tools — I master them.</p>
         <p>I work at the intersection of design and technology, creating visual systems, digital experiences, and AI-generated worlds. My aesthetic is minimalist but never cold — precise, intentional, and always with a story behind it.</p>
@@ -89,8 +55,7 @@
           </svg>
         </a>
       </div>
-    <div class="about-img">
-      <img src="img/flor_2.png" alt="Florencia Paramidani">
     </div>
-  </div>
-</section>
+  </section>
+</body>
+</html>
