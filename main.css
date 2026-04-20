@@ -477,24 +477,35 @@
 @media (max-width: 768px) {
   #about {
     padding: 80px 24px;
+    overflow: hidden;
   }
   .about-inner {
     flex-direction: column;
-    gap: 32px;
+    gap: 28px;
     align-items: center;
+    width: 100%;
+  }
+  .about-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
   .about-img img {
-    width: 100%;
-    max-width: 280px;
-    border-radius: 4px;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
   }
   .about-text {
+    width: 100%;
     text-align: left;
   }
   .about-name {
-    font-size: 28px;
+    font-size: 26px;
   }
   .about-text p {
     font-size: 14px;
+    line-height: 1.7;
+    word-break: break-word;
   }
 }
