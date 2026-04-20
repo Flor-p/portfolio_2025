@@ -73,20 +73,22 @@ a:hover {
   .back-icon {
   display: inline-flex;
   align-items: center;
-  margin: 3rem 0 0 1rem; /* arriba y a la izquierda */
+  margin: 3rem 0 0 1rem;
   text-decoration: none;
+  color: white;
   transition: transform 0.3s ease;
 }
 
 .arrow-icon {
   width: 48px;
   height: 48px;
-  stroke: #ffffff;
+  stroke: white;
   transition: stroke 0.3s ease, transform 0.3s ease;
 }
 
 .back-icon:hover .arrow-icon {
-  stroke: #007BFF; /* o el color que prefieras */
+  stroke: #FF4FA3;
+  opacity: 1;
   transform: translateX(-4px);
 }
 
