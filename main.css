@@ -473,3 +473,28 @@
     list-style: none;
   }
 }
+
+@media (max-width: 768px) {
+  #about {
+    padding: 80px 24px;
+  }
+  .about-inner {
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+  }
+  .about-img img {
+    width: 100%;
+    max-width: 280px;
+    border-radius: 4px;
+  }
+  .about-text {
+    text-align: left;
+  }
+  .about-name {
+    font-size: 28px;
+  }
+  .about-text p {
+    font-size: 14px;
+  }
+}
