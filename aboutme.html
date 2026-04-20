@@ -40,6 +40,35 @@
   stroke: #FF4FA3;
   transform: translateX(-5px);
 }
+
+@media (max-width: 768px) {
+  #aboutme {
+    padding: 80px 24px;
+    overflow: hidden;
+  }
+  .about-section {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 28px !important;
+    width: 100% !important;
+  }
+  .about-section img {
+    width: 160px !important;
+    height: 160px !important;
+    object-fit: cover !important;
+    border-radius: 50% !important;
+    order: -1;
+  }
+  .about-section > div {
+    width: 100% !important;
+    text-align: left !important;
+    word-break: break-word !important;
+  }
+  .about-section p {
+    font-size: 14px !important;
+    line-height: 1.7 !important;
+  }
+}
 </style>
 
 <section id="aboutme">
