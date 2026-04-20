@@ -89,3 +89,15 @@ a:hover {
   stroke: #007BFF; /* o el color que prefieras */
   transform: translateX(-4px);
 }
+
+.actions { position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); display: flex; gap: 12px; z-index: 200; }
+.prev, .next { font-family: 'Inter Tight', sans-serif !important; font-weight: 300 !important; font-size: 11px !important; letter-spacing: 0.3em !important; color: white !important; background: transparent !important; border: 1px solid rgba(255,255,255,0.35) !important; padding: 10px 28px !important; cursor: pointer; transition: all 0.3s ease; border-radius: 0 !important; }
+.prev:hover, .next:hover { background: rgba(255,255,255,0.1) !important; border-color: rgba(255,255,255,0.6) !important; }
+
+.mj-label { font-family: 'Inter Tight', sans-serif; font-weight: 300; font-size: 11px; color: #FF4FA3; letter-spacing: 0.4em; text-transform: uppercase; display: block; margin-bottom: 12px; }
+.mj-title { font-family: 'Dosis', sans-serif; font-weight: 200; font-size: 42px; color: white; letter-spacing: 0.2em; margin: 0 0 48px; }
+.mj-grid { display: flex; gap: 16px; justify-content: center; align-items: flex-start; flex-wrap: wrap; margin-bottom: 48px; }
+.mj-item { width: 180px; border-radius: 8px; overflow: hidden; }
+.mj-item video { width: 100%; height: 320px; object-fit: cover; display: block; }
+.mj-cta { font-family: 'Inter Tight', sans-serif; font-weight: 300; font-size: 12px; color: #FF4FA3; letter-spacing: 0.3em; text-decoration: none; border-bottom: 1px solid rgba(255,79,163,0.3); padding-bottom: 2px; transition: border-color 0.3s ease; }
+.mj-cta:hover { border-color: #FF4FA3; }

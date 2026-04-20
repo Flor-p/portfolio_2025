@@ -132,8 +132,8 @@
 
         </ul>
         <div class="actions">
-            <button type="button" class="prev btn btn-outline-primary">Prev</button>
-            <button type="button" class="next btn btn-outline-primary">Next</button>
+            <button type="button" class="prev btn btn-outline-primary">PREV</button>
+            <button type="button" class="next btn btn-outline-primary">NEXT</button>
         </div>
 
         <a href="index.html" class="back-icon" aria-label="Go back home">
@@ -260,23 +260,29 @@
         </script>
 
 <script>
-
 document.addEventListener("DOMContentLoaded", function () {
-    const listItems = document.querySelectorAll(".cards li");
-
-    listItems.forEach((li, index) => {
-        const img = document.createElement("img");
-        img.src = `img/img${index + 1}.png`; // Asegúrate de que el nombre de los archivos coincida
-        img.alt = `Imagen ${index + 1}`;
-        img.style.width = "100%"; // Ajusta el tamaño según necesites
-        img.style.height = "100%";
-        img.style.marginRight = "10px";
-
-        li.prepend(img); // Agrega la imagen antes del texto
-    });
+  const videos = [
+    "https://res.cloudinary.com/dztjjjmcb/video/upload/v1776646729/flor_p_strange_creature_walking_around_Harajuku_Tokios_distri_885b34b1-68f9-4b1e-b085-15ebecf8a0ba_1_vdzhyo.mp4",
+    "https://res.cloudinary.com/dztjjjmcb/video/upload/v1776646729/flor_p_httpss.mj.runjgvT7E5G2Ws_A_hyper-photorealistic_ultra-_eaddbb77-f0ee-4ea7-9883-a736b598b5cd_0_w88czt.mp4",
+    "https://res.cloudinary.com/dztjjjmcb/video/upload/v1776646181/grok-video-75b27faf-43e0-4c0b-bdb7-60ee14e76671_dbsety.mp4",
+    "https://res.cloudinary.com/dztjjjmcb/video/upload/v1776646257/grok-video-2c1e01ce-edd9-421e-8eaa-4578b704f60a_ergdsb.mp4",
+    "https://res.cloudinary.com/dztjjjmcb/video/upload/v1776647118/grok-video-58a3d665-3889-4f0d-a7f3-428aedd0a32c_en3tko.mp4",
+    "https://res.cloudinary.com/dztjjjmcb/video/upload/v1776647056/grok-video-57b9756f-442a-4224-b4c1-631c9f2faf5d_mqrobm.mp4"
+  ];
+  const listItems = document.querySelectorAll(".cards li");
+  listItems.forEach((li, index) => {
+    const video = document.createElement("video");
+    video.src = videos[index % videos.length];
+    video.autoplay = true;
+    video.muted = true;
+    video.loop = true;
+    video.playsInline = true;
+    video.style.width = "100%";
+    video.style.height = "100%";
+    video.style.objectFit = "cover";
+    li.prepend(video);
+  });
 });
-
-
 </script>
 
 </body>

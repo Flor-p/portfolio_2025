@@ -13,18 +13,21 @@
     }
 
     /* ===== NAVBAR ===== */
+    nav, .navbar {
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+      background: transparent;
+    }
+
     nav {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
-      background: white;
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 1rem 2rem;
       z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     }
 
     .logo {
@@ -437,3 +440,13 @@
     .chiyo-cta:hover {
       border-color: #FF4FA3;
     }
+
+    /* ===== MJ PREVIEW ===== */
+    .mj-inner { max-width: 900px; margin: 0 auto; padding: 80px 24px; text-align: center; }
+    .mj-label { font-family: 'Inter Tight', sans-serif; font-weight: 300; font-size: 11px; color: #FF4FA3; letter-spacing: 0.4em; text-transform: uppercase; display: block; margin-bottom: 12px; }
+    .mj-title { font-family: 'Dosis', sans-serif; font-weight: 200; font-size: 42px; color: white; letter-spacing: 0.2em; margin: 0 0 48px; }
+    .mj-grid { display: flex; gap: 16px; justify-content: center; align-items: flex-start; flex-wrap: wrap; margin-bottom: 48px; }
+    .mj-item { width: 180px; border-radius: 8px; overflow: hidden; }
+    .mj-item video { width: 100%; height: 320px; object-fit: cover; display: block; }
+    .mj-cta { font-family: 'Inter Tight', sans-serif; font-weight: 300; font-size: 12px; color: #FF4FA3; letter-spacing: 0.3em; text-decoration: none; border-bottom: 1px solid rgba(255,79,163,0.3); padding-bottom: 2px; transition: border-color 0.3s ease; }
+    .mj-cta:hover { border-color: #FF4FA3; }

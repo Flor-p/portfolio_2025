@@ -21,12 +21,13 @@
       <div></div>
       <div></div>
     </div>
-    <div class="nav-links" id="nav-links">
-      <a href="#portfolio">PORTFOLIO</a>
-      <a href="aboutme.html">ABOUT ME</a>
-      <a href="midjourney.html">MIDJOURNEY</a>
-      <a href="#contact">CONTACT</a>
-    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#portfolio">PORTFOLIO</a></li>
+      <li><a href="#chiyo-chan">CHIYO-CHAN</a></li>
+      <li><a href="#mj-preview">AI GALLERY</a></li>
+      <li><a href="aboutme.html">ABOUT</a></li>
+      <li><a href="#contact">CONTACT</a></li>
+    </ul>
   </nav>
 
   <!-- HERO -->
@@ -213,6 +214,21 @@
     </div>
   </section>
 
+  <!-- MIDJOURNEY PREVIEW -->
+  <section id="mj-preview">
+    <div class="mj-inner">
+      <span class="mj-label">AI · Generative</span>
+      <h2 class="mj-title">MIDJOURNEY</h2>
+      <div class="mj-grid">
+        <div class="mj-item"><video autoplay muted loop playsinline><source src="https://res.cloudinary.com/dztjjjmcb/video/upload/v1776646181/grok-video-75b27faf-43e0-4c0b-bdb7-60ee14e76671_dbsety.mp4" type="video/mp4"></video></div>
+        <div class="mj-item"><video autoplay muted loop playsinline><source src="https://res.cloudinary.com/dztjjjmcb/video/upload/v1776646729/flor_p_strange_creature_walking_around_Harajuku_Tokios_distri_885b34b1-68f9-4b1e-b085-15ebecf8a0ba_1_vdzhyo.mp4" type="video/mp4"></video></div>
+        <div class="mj-item"><video autoplay muted loop playsinline><source src="https://res.cloudinary.com/dztjjjmcb/video/upload/v1776646729/flor_p_httpss.mj.runjgvT7E5G2Ws_A_hyper-photorealistic_ultra-_eaddbb77-f0ee-4ea7-9883-a736b598b5cd_0_w88czt.mp4" type="video/mp4"></video></div>
+        <div class="mj-item"><video autoplay muted loop playsinline><source src="https://res.cloudinary.com/dztjjjmcb/video/upload/v1776647056/grok-video-57b9756f-442a-4224-b4c1-631c9f2faf5d_mqrobm.mp4" type="video/mp4"></video></div>
+      </div>
+      <a href="midjourney.html" class="mj-cta">Explore full gallery →</a>
+    </div>
+  </section>
+
   <!-- FOOTER -->
 <footer id="contact" style="background: #fff; padding: 2rem 0; text-align: center; box-shadow: 0 -2px 10px rgba(0,0,0,0.05);">
   <div style="font-size: 1.5rem; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
@@ -232,6 +248,25 @@
   <p style="margin-top: 1rem; font-size: 0.9rem; color: #555;">© 2025 Florencia Paramidani</p>
 </footer>
   <script>
+    function updateNav() {
+      const nav = document.querySelector('nav') || document.querySelector('.navbar');
+      const navLinksAll = document.querySelectorAll('#nav-links a');
+      const navLogo = document.querySelector('.logo');
+      if (window.scrollY > 80) {
+        nav.style.background = 'rgba(255,255,255,0.97)';
+        nav.style.boxShadow = '0 1px 20px rgba(0,0,0,0.08)';
+        navLinksAll.forEach(a => a.style.color = 'black');
+        if (navLogo) navLogo.style.color = 'black';
+      } else {
+        nav.style.background = 'transparent';
+        nav.style.boxShadow = 'none';
+        navLinksAll.forEach(a => a.style.color = 'white');
+        if (navLogo) navLogo.style.color = 'white';
+      }
+    }
+    window.addEventListener('scroll', updateNav);
+    updateNav();
+
     // Toggle burger menu
     const burger = document.getElementById('burger');
     const navLinks = document.getElementById('nav-links');
