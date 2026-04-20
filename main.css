@@ -509,3 +509,42 @@
     word-break: break-word;
   }
 }
+
+/* ===== TECH PROJECTS ===== */
+.tech-btn {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 300;
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  color: rgba(255,255,255,0.6);
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 8px 20px;
+  background: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.tech-btn:hover {
+  border-color: #FF4FA3;
+  color: #FF4FA3;
+}
+.tech-btn-ghost {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 300;
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  color: rgba(255,255,255,0.4);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  padding-bottom: 2px;
+  transition: all 0.3s ease;
+}
+.tech-btn-ghost:hover {
+  color: #FF4FA3;
+  border-color: #FF4FA3;
+}
+@media (max-width: 768px) {
+  #tech-projects { padding: 80px 20px; }
+  .tech-card { flex-direction: column; gap: 24px; }
+  .tech-title { font-size: 28px; }
+}
