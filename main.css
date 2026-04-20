@@ -49,9 +49,10 @@ nav {
 .nav-links a {
   text-decoration: none;
   color: #000;
-  font-size: 1rem;
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
+  font-size: 0.75rem;
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.2em;
 }
 
 .burger {
@@ -319,10 +320,10 @@ nav {
 }
 
 .chiyo-title {
-  font-family: 'Inter Tight', sans-serif;
-  font-weight: 300;
+  font-family: 'Dosis', sans-serif;
+  font-weight: 200;
   font-size: 52px;
-  letter-spacing: 0.5em;
+  letter-spacing: 0.3em;
   color: #fff;
   margin: 0;
 }
@@ -516,6 +517,7 @@ nav {
   text-transform: uppercase;
   display: block;
   margin-bottom: 12px;
+  text-align: center;
 }
 
 .tech-title {
@@ -525,6 +527,7 @@ nav {
   color: white;
   letter-spacing: 0.2em;
   margin: 0 0 60px;
+  text-align: center;
 }
 
 .tech-grid {
@@ -631,4 +634,8 @@ nav {
   #mj-preview { padding: 60px 20px; }
   .mj-item { width: 140px; }
   .mj-item video { height: 240px; }
+}
+
+#chiyo-chan, #mj-preview, #tech-projects {
+  border-top: 1px solid rgba(255, 79, 163, 0.5);
 }
