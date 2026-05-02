@@ -292,6 +292,7 @@ nav {
 #chiyo-chan {
   background: #0a0a0f;
   padding: 6rem 2rem;
+  position: relative;
 }
 
 .chiyo-inner {
@@ -301,6 +302,8 @@ nav {
   flex-direction: column;
   align-items: center;
   gap: 3.5rem;
+  position: relative;
+  z-index: 1;
 }
 
 .chiyo-header {
