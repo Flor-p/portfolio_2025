@@ -501,11 +501,16 @@ nav {
 #tech-projects {
   background: #080808;
   padding: 100px 40px;
+  position: relative;
+  overflow: hidden;
 }
 
 .tech-inner {
   max-width: 1100px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  will-change: transform;
 }
 
 .tech-label {
