@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Creative Challenge — Florencia Paramidani</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --pink: #FF4FA3;
+      --bg: #0d0d0d;
+      --surface: #161616;
+      --border: rgba(255,255,255,0.07);
+      --text: #e8e8e8;
+      --muted: #888;
+    }
+
+    body {
+      font-family: 'Inter Tight', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      padding: 100px 40px 60px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .hero-label {
+      font-size: 11px;
+      font-weight: 300;
+      letter-spacing: 0.45em;
+      text-transform: uppercase;
+      color: var(--pink);
+      display: block;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-size: clamp(32px, 6vw, 64px);
+      font-weight: 200;
+      letter-spacing: -0.01em;
+      line-height: 1.1;
+      color: #fff;
+      margin-bottom: 24px;
+    }
+    .hero h1 em {
+      font-style: normal;
+      color: var(--pink);
+    }
+    .hero-meta {
+      font-size: 13px;
+      font-weight: 300;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      margin-bottom: 36px;
+    }
+    .hero-desc {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.8;
+      color: #bbb;
+      max-width: 680px;
+    }
+    .hero-desc strong {
+      font-weight: 500;
+      color: #fff;
+    }
+
+    /* ── COMPETITION DETAIL ── */
+    .detail-strip {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 32px 40px;
+      display: flex;
+      gap: 48px;
+      flex-wrap: wrap;
+      max-width: 900px;
+      margin: 0 auto 60px;
+    }
+    .detail-item {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .detail-item .label {
+      font-size: 10px;
+      font-weight: 300;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--pink);
+    }
+    .detail-item .value {
+      font-size: 15px;
+      font-weight: 400;
+      color: #fff;
+    }
+
+    /* ── COMPETITION BREAKDOWN ── */
+    .breakdown {
+      max-width: 900px;
+      margin: 0 auto 70px;
+      padding: 0 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .breakdown-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 28px 32px;
+    }
+    .breakdown-card h3 {
+      font-size: 11px;
+      font-weight: 300;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--pink);
+      margin-bottom: 14px;
+    }
+    .breakdown-card p {
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.75;
+      color: #aaa;
+    }
+    .breakdown-card p strong {
+      color: #fff;
+      font-weight: 500;
+    }
+
+    /* ── PHOTO GRID ── */
+    .gallery-section {
+      max-width: 1100px;
+      margin: 0 auto 80px;
+      padding: 0 40px;
+    }
+    .gallery-label {
+      font-size: 11px;
+      font-weight: 300;
+      letter-spacing: 0.45em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 24px;
+      display: block;
+    }
+
+    /* Layout: big photo left, 2 stacked right */
+    .grid-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+    .grid-top .photo-main {
+      grid-row: span 2;
+    }
+    /* Row of 3 */
+    .grid-mid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+    /* Last row: 2 side by side */
+    .grid-bot {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .photo-wrap {
+      overflow: hidden;
+      background: #111;
+      border-radius: 3px;
+    }
+    .photo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+      filter: brightness(0.92);
+    }
+    .photo-wrap:hover img {
+      transform: scale(1.03);
+      filter: brightness(1);
+    }
+
+    /* Fixed heights */
+    .grid-top .photo-main { height: 500px; }
+    .grid-top .photo-side { height: 246px; }
+    .grid-mid .photo-wrap  { height: 280px; }
+    .grid-bot .photo-wrap  { height: 320px; }
+
+    /* ── BACK ── */
+    .back-row {
+      max-width: 900px;
+      margin: 0 auto 80px;
+      padding: 0 40px;
+    }
+    .back-icon {
+      display: inline-block;
+      text-decoration: none;
+    }
+    .arrow-icon {
+      width: 40px;
+      height: 40px;
+      stroke: #555;
+      transition: stroke 0.3s ease, transform 0.3s ease;
+    }
+    .back-icon:hover .arrow-icon {
+      stroke: var(--pink);
+      transform: translateX(-5px);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .hero { padding: 80px 20px 40px; }
+      .detail-strip { padding: 24px 20px; gap: 28px; }
+      .breakdown { padding: 0 20px; grid-template-columns: 1fr; }
+      .gallery-section { padding: 0 16px; }
+      .back-row { padding: 0 20px; }
+
+      .grid-top { grid-template-columns: 1fr; }
+      .grid-top .photo-main { height: 260px; }
+      .grid-top .photo-side { height: 200px; }
+      .grid-mid { grid-template-columns: 1fr 1fr; }
+      .grid-mid .photo-wrap { height: 180px; }
+      .grid-bot { grid-template-columns: 1fr; }
+      .grid-bot .photo-wrap { height: 220px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <span class="hero-label">The One Club for Creativity · Buenos Aires · 2026</span>
+    <h1>AI Creative<br><em>Challenge</em></h1>
+    <p class="hero-meta">October 23, 2026 &nbsp;·&nbsp; Buenos Aires, Argentina</p>
+    <p class="hero-desc">
+      Competed in the first edition of The One Club's <strong>AI Creative Challenge</strong> in Argentina — a live prompt battle where creatives generate images and video in real time, judged by a jury of advertising and technology professionals.
+      <br><br>
+      The format: two competitors, one brief, ten minutes. Build the best AI-generated visual piece on stage, in front of a live audience, using whatever tools and workflow you bring.
+    </p>
+  </section>
+
+  <!-- META STRIP -->
+  <div class="detail-strip">
+    <div class="detail-item">
+      <span class="label">Event</span>
+      <span class="value">AI Creative Challenge</span>
+    </div>
+    <div class="detail-item">
+      <span class="label">Organizer</span>
+      <span class="value">The One Club for Creativity</span>
+    </div>
+    <div class="detail-item">
+      <span class="label">Format</span>
+      <span class="value">Live prompt battle</span>
+    </div>
+    <div class="detail-item">
+      <span class="label">Tools used</span>
+      <span class="value">JSON Prompt Engine · Runway · Midjourney</span>
+    </div>
+  </div>
+
+  <!-- BREAKDOWN CARDS -->
+  <div class="breakdown">
+    <div class="breakdown-card">
+      <h3>The competition</h3>
+      <p>Two participants compete head-to-head with a shared brief revealed on stage. <strong>10 minutes</strong> to produce the best visual output using any AI tools. A jury scores the results live.</p>
+    </div>
+    <div class="breakdown-card">
+      <h3>My workflow</h3>
+      <p>I ran my own tool on stage: <strong>JSON Prompt Engine</strong> — a prompt structuring app I built for video generation with Runway Gen-4. Live-coded prompts, iterated in real time, in front of the audience.</p>
+    </div>
+  </div>
+
+  <!-- PHOTO GALLERY -->
+  <div class="gallery-section">
+    <span class="gallery-label">Event photos</span>
+
+    <!-- Row 1: big left + 2 stacked right -->
+    <div class="grid-top">
+      <div class="photo-wrap photo-main">
+        <img src="img/ai-challenge/photo5.jpg" alt="AI Creative Challenge — competition on stage">
+      </div>
+      <div class="photo-wrap photo-side">
+        <img src="img/ai-challenge/photo3.jpg" alt="Participants group photo">
+      </div>
+      <div class="photo-wrap photo-side">
+        <img src="img/ai-challenge/photo6.jpg" alt="Working on stage during competition">
+      </div>
+    </div>
+
+    <!-- Row 2: 3 equal -->
+    <div class="grid-mid">
+      <div class="photo-wrap">
+        <img src="img/ai-challenge/photo1.jpg" alt="Group photo — all participants">
+      </div>
+      <div class="photo-wrap">
+        <img src="img/ai-challenge/photo2.jpg" alt="Group celebrating">
+      </div>
+      <div class="photo-wrap">
+        <img src="img/ai-challenge/photo4.jpg" alt="Group photo">
+      </div>
+    </div>
+
+    <!-- Row 3: 2 equal -->
+    <div class="grid-bot">
+      <div class="photo-wrap">
+        <img src="img/ai-challenge/photo7.jpg" alt="JSON Prompt Engine on screen — competition">
+      </div>
+      <div class="photo-wrap">
+        <img src="img/ai-challenge/photo6.jpg" alt="Presenting to the audience">
+      </div>
+    </div>
+  </div>
+
+  <!-- BACK -->
+  <div class="back-row">
+    <a href="index.html" class="back-icon" aria-label="Go back home">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2.5"
+        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" class="arrow-icon">
+        <line x1="19" y1="12" x2="5" y2="12" />
+        <polyline points="12 19 5 12 12 5" />
+      </svg>
+    </a>
+  </div>
+
+</body>
+</html>
