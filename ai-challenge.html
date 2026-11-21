@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>AI Creative Challenge — Florencia Paramidani</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.css"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -178,6 +179,12 @@
       background: #111;
       border-radius: 3px;
     }
+    .photo-wrap a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      cursor: zoom-in;
+    }
     .photo-wrap img {
       width: 100%;
       height: 100%;
@@ -293,39 +300,64 @@
     <!-- Row 1: big left + 2 stacked right -->
     <div class="grid-top">
       <div class="photo-wrap photo-main">
-        <img src="img/ai-challenge/photo5.jpg" alt="AI Creative Challenge — competition on stage">
+        <a href="img/ai-challenge/photo5.jpg" data-fancybox="gallery" data-caption="AI Creative Challenge — competition on stage">
+          <img src="img/ai-challenge/photo5.jpg" alt="AI Creative Challenge — competition on stage">
+        </a>
       </div>
       <div class="photo-wrap photo-side">
-        <img src="img/ai-challenge/photo3.jpg" alt="Participants group photo">
+        <a href="img/ai-challenge/photo3.jpg" data-fancybox="gallery" data-caption="Participants group photo">
+          <img src="img/ai-challenge/photo3.jpg" alt="Participants group photo">
+        </a>
       </div>
       <div class="photo-wrap photo-side">
-        <img src="img/ai-challenge/photo6.jpg" alt="Working on stage during competition">
+        <a href="img/ai-challenge/photo6.jpg" data-fancybox="gallery" data-caption="Working on stage during competition">
+          <img src="img/ai-challenge/photo6.jpg" alt="Working on stage during competition">
+        </a>
       </div>
     </div>
 
     <!-- Row 2: 3 equal -->
     <div class="grid-mid">
       <div class="photo-wrap">
-        <img src="img/ai-challenge/photo1.jpg" alt="Group photo — all participants">
+        <a href="img/ai-challenge/photo1.jpg" data-fancybox="gallery" data-caption="Group photo — all participants">
+          <img src="img/ai-challenge/photo1.jpg" alt="Group photo — all participants">
+        </a>
       </div>
       <div class="photo-wrap">
-        <img src="img/ai-challenge/photo2.jpg" alt="Group celebrating">
+        <a href="img/ai-challenge/photo2.jpg" data-fancybox="gallery" data-caption="Group celebrating">
+          <img src="img/ai-challenge/photo2.jpg" alt="Group celebrating">
+        </a>
       </div>
       <div class="photo-wrap">
-        <img src="img/ai-challenge/photo4.jpg" alt="Group photo">
+        <a href="img/ai-challenge/photo4.jpg" data-fancybox="gallery" data-caption="Group photo">
+          <img src="img/ai-challenge/photo4.jpg" alt="Group photo">
+        </a>
       </div>
     </div>
 
     <!-- Row 3: 2 equal -->
     <div class="grid-bot">
       <div class="photo-wrap">
-        <img src="img/ai-challenge/photo7.jpg" alt="JSON Prompt Engine on screen — competition">
+        <a href="img/ai-challenge/photo7.jpg" data-fancybox="gallery" data-caption="On stage — competition">
+          <img src="img/ai-challenge/photo7.jpg" alt="On stage — competition">
+        </a>
       </div>
       <div class="photo-wrap">
-        <img src="img/ai-challenge/photo6.jpg" alt="Presenting to the audience">
+        <a href="img/ai-challenge/photo6.jpg" data-fancybox="gallery" data-caption="Presenting to the audience">
+          <img src="img/ai-challenge/photo6.jpg" alt="Presenting to the audience">
+        </a>
       </div>
     </div>
   </div>
+
+  <!-- Fancybox JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.umd.js"></script>
+  <script>
+    Fancybox.bind('[data-fancybox="gallery"]', {
+      Thumbs: { showOnStart: false },
+      Toolbar: { display: { left: ['infobar'], middle: [], right: ['close'] } },
+    });
+  </script>
 
   <!-- BACK -->
   <div class="back-row">
