@@ -60,6 +60,6 @@
 }
 
 .back-icon:hover .arrow-icon {
-  stroke: #007BFF; /* o el color que prefieras */
+  stroke: #C8FF00;
   transform: translateX(-4px);
 }
