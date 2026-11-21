@@ -106,7 +106,7 @@
       margin: 0 auto 70px;
       padding: 0 40px;
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       gap: 24px;
     }
     .breakdown-card {
@@ -287,9 +287,18 @@
       <h3>The competition</h3>
       <p>Two participants compete head-to-head with a shared brief revealed on stage. <strong>10 minutes</strong> to produce the best visual output using any AI tools. A jury scores the results live.</p>
     </div>
-    <div class="breakdown-card">
+    <div class="breakdown-card" style="grid-column: span 1;">
       <h3>My workflow</h3>
-      <p>I built my prompts with <strong>JSON Prompt Engine</strong> — my own app — then fed them into <strong>Magnific</strong> via a dedicated Claude session connected through MCP to generate and upscale visuals in real time, iterating live on stage in front of the audience and jury.</p>
+      <p style="margin-bottom:14px;">Three layers built before the event, deployed live under pressure.</p>
+
+      <p style="margin-bottom:6px; color:#fff; font-weight:500; font-size:13px;">01 — Engine prep</p>
+      <p style="margin-bottom:14px;">I tuned <strong>JSON Prompt Engine</strong> for the challenge format: roulette brief, 10-minute clock, video with audio. Standard A = Seedance 2.0 Fast (15 s, 3 shots, 720p, audio on); Standard B = Veo 3.1 Fast (8 s). The AI assistant was updated with multi-shot timing, creative IDEA step, Spanish dialogue, physically described Argentine objects (mate con bombilla), and correct animal anatomy.</p>
+
+      <p style="margin-bottom:6px; color:#fff; font-weight:500; font-size:13px;">02 — Error guards</p>
+      <p style="margin-bottom:14px;">Automated guards in the code: clean avoid lists, no real people or copyrighted characters (auto-replaced with original archetypes), no empty strings on screen, wrong-language dialogue auto-deleted. Timed rehearsals at 5:02 with the engine and 6:00 with the chat, plus credit control for Magnific and Anthropic.</p>
+
+      <p style="margin-bottom:6px; color:#fff; font-weight:500; font-size:13px;">03 — Plan B: the DUELO chat</p>
+      <p>A Claude session connected to Magnific via MCP, with a dedicated method doc: type <strong>DUELO: &lt;brief&gt;</strong> → get IDEA + Seedance-ready prompt, with shortcuts B, GUION, MÁS LOCO, MÁS EMOCIÓN, MÁS HUMOR. This is what ran on stage.</p>
     </div>
   </div>
 
