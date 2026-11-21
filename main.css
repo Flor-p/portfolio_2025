@@ -65,7 +65,8 @@ nav {
 .burger div {
   width: 25px;
   height: 3px;
-  background: black;
+  background: #fff;
+  border-radius: 2px;
 }
 
 @media (max-width: 768px) {
