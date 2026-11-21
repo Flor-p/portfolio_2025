@@ -134,6 +134,51 @@
       font-weight: 500;
     }
 
+    /* ── FINAL PIECE (VIDEO) ── */
+    .video-section {
+      max-width: 1100px;
+      margin: 0 auto 80px;
+      padding: 0 40px;
+    }
+    .video-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+    .video-head .gallery-label { margin-bottom: 0; }
+    .video-note {
+      font-size: 12px;
+      font-weight: 300;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
+    .video-frame {
+      position: relative;
+      background: #000;
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    .video-frame video {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 80vh;
+      margin: 0 auto;
+      background: #000;
+    }
+    .video-frame::after {
+      content: '';
+      position: absolute;
+      left: 0; top: 0;
+      width: 48px; height: 2px;
+      background: var(--pink);
+      pointer-events: none;
+    }
+
     /* ── PHOTO GRID ── */
     .gallery-section {
       max-width: 1100px;
@@ -231,6 +276,7 @@
       .detail-strip { padding: 24px 20px; gap: 28px; }
       .breakdown { padding: 0 20px; grid-template-columns: 1fr; }
       .gallery-section { padding: 0 16px; }
+      .video-section { padding: 0 16px; margin-bottom: 56px; }
       .back-row { padding: 0 20px; }
 
       .grid-top { grid-template-columns: 1fr; }
@@ -315,6 +361,20 @@
       <p>A Claude session connected to Magnific via MCP, with a dedicated method doc: type <strong>DUELO: &lt;brief&gt;</strong> → get IDEA + Seedance-ready prompt, with shortcuts B, GUION, MÁS LOCO, MÁS EMOCIÓN, MÁS HUMOR. This is what ran on stage.</p>
     </div>
   </div>
+
+  <!-- FINAL PIECE -->
+  <section class="video-section" aria-labelledby="final-piece-label">
+    <div class="video-head">
+      <span class="gallery-label" id="final-piece-label">Final piece</span>
+      <span class="video-note">Generated live on stage · 10 minutes · Magnific + DUELO chat</span>
+    </div>
+    <div class="video-frame">
+      <video controls playsinline preload="metadata" poster="https://res.cloudinary.com/dztjjjmcb/video/upload/so_2,q_auto/v1795288019/magnific_a-young-dog-walker-in-a-cap-and-sporty-jacket-holds-a-thick-bundle-of-leashes-attached-to-a-huge-pack-of-around-forty-dogs-of-every-breed-and-size-on-a-treelined-avenue-in-recoleta-buenos-air_cgrxhv.jpg">
+        <source src="https://res.cloudinary.com/dztjjjmcb/video/upload/v1795288019/magnific_a-young-dog-walker-in-a-cap-and-sporty-jacket-holds-a-thick-bundle-of-leashes-attached-to-a-huge-pack-of-around-forty-dogs-of-every-breed-and-size-on-a-treelined-avenue-in-recoleta-buenos-air_cgrxhv.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+    </div>
+  </section>
 
   <!-- PHOTO GALLERY -->
   <div class="gallery-section">
