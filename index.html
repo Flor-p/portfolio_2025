@@ -261,10 +261,10 @@
 
   <!-- AI CHALLENGE TEASER -->
   <section id="ai-challenge-teaser" style="background:#0d0d0d; padding: 80px 40px; text-align:center;">
-    <span style="font-family:'Inter Tight',sans-serif; font-size:11px; font-weight:300; letter-spacing:0.45em; text-transform:uppercase; color:#FF4FA3; display:block; margin-bottom:20px;">The One Club for Creativity · Buenos Aires · 2026</span>
+    <span style="font-family:'Inter Tight',sans-serif; font-size:11px; font-weight:300; letter-spacing:0.45em; text-transform:uppercase; color:#C8FF00; display:block; margin-bottom:20px;">The One Club for Creativity · Buenos Aires · 2026</span>
     <h2 style="font-family:'Inter Tight',sans-serif; font-size:clamp(28px,5vw,52px); font-weight:200; color:#fff; margin-bottom:16px; letter-spacing:-0.01em;">AI Creative Challenge</h2>
     <p style="font-family:'Inter Tight',sans-serif; font-size:15px; font-weight:300; color:#888; max-width:520px; margin:0 auto 36px; line-height:1.75;">Live prompt battle. 10 minutes. One brief. Competed on stage with my own AI tool — JSON Prompt Engine.</p>
-    <a href="ai-challenge.html" style="font-family:'Inter Tight',sans-serif; font-size:12px; font-weight:400; letter-spacing:0.2em; text-transform:uppercase; color:#FF4FA3; text-decoration:none; border-bottom:1px solid rgba(255,79,163,0.4); padding-bottom:3px;">See the full story →</a>
+    <a href="ai-challenge.html" style="font-family:'Inter Tight',sans-serif; font-size:12px; font-weight:400; letter-spacing:0.2em; text-transform:uppercase; color:#C8FF00; text-decoration:none; border-bottom:1px solid rgba(200,255,0,0.4); padding-bottom:3px;">See the full story →</a>
   </section>
 
   <!-- FOOTER -->
@@ -360,10 +360,10 @@
         speeds[i] = 0.004 + Math.random() * 0.008;
         var isPink = Math.random() < 0.28;
         if (isPink) {
-          /* #FF4FA3 */
-          colors[i * 3]     = 1.0;
-          colors[i * 3 + 1] = 0.310;
-          colors[i * 3 + 2] = 0.639;
+          /* #C8FF00 */
+          colors[i * 3]     = 0.784;
+          colors[i * 3 + 1] = 1.0;
+          colors[i * 3 + 2] = 0.0;
         } else {
           var v = 0.15 + Math.random() * 0.35;
           colors[i * 3]     = v;
@@ -431,7 +431,7 @@
 
         /* pulsing border-top */
         var bs = 0.5 + 0.5 * Math.sin((phase + 0.5) * Math.PI * 2);
-        section.style.borderTopColor = 'rgba(255,79,163,' + (0.12 + 0.38 * bs).toFixed(3) + ')';
+        section.style.borderTopColor = 'rgba(200,255,0,' + (0.12 + 0.38 * bs).toFixed(3) + ')';
 
         renderer.render(scene, camera);
         requestAnimationFrame(tick);
@@ -476,7 +476,7 @@
     wobble[i] = Math.random() * Math.PI * 2;
     var roll = Math.random();
     if (roll < 0.15) {
-      colors[i*3]=1.0; colors[i*3+1]=0.31; colors[i*3+2]=0.64;
+      colors[i*3]=0.784; colors[i*3+1]=1.0; colors[i*3+2]=0.0;
     } else if (roll < 0.28) {
       colors[i*3]=0.72; colors[i*3+1]=0.60; colors[i*3+2]=0.95;
     } else if (roll < 0.38) {

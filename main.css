@@ -319,7 +319,7 @@ nav {
   font-weight: 300;
   font-size: 20px;
   letter-spacing: 0.4em;
-  color: rgba(255,79,163,0.5);
+  color: rgba(200,255,0,0.5);
 }
 
 .chiyo-title {
@@ -406,7 +406,7 @@ nav {
   font-weight: 300;
   font-size: 9px;
   letter-spacing: 0.4em;
-  color: #FF4FA3;
+  color: #C8FF00;
 }
 
 .ep-name {
@@ -422,15 +422,15 @@ nav {
   font-family: 'Inter Tight', sans-serif;
   font-weight: 300;
   font-size: 12px;
-  color: #FF4FA3;
+  color: #C8FF00;
   letter-spacing: 0.3em;
   text-decoration: none;
-  border-bottom: 1px solid rgba(255,79,163,0.3);
+  border-bottom: 1px solid rgba(200,255,0,0.3);
   padding-bottom: 2px;
   transition: border-color 0.3s ease;
 }
 
-.chiyo-cta:hover { border-color: #FF4FA3; }
+.chiyo-cta:hover { border-color: #C8FF00; }
 
 /* ===== MJ PREVIEW ===== */
 #mj-preview {
@@ -448,7 +448,7 @@ nav {
   font-family: 'Inter Tight', sans-serif;
   font-weight: 300;
   font-size: 11px;
-  color: #FF4FA3;
+  color: #C8FF00;
   letter-spacing: 0.4em;
   text-transform: uppercase;
   display: block;
@@ -490,15 +490,15 @@ nav {
   font-family: 'Inter Tight', sans-serif;
   font-weight: 300;
   font-size: 12px;
-  color: #FF4FA3;
+  color: #C8FF00;
   letter-spacing: 0.3em;
   text-decoration: none;
-  border-bottom: 1px solid rgba(255,79,163,0.3);
+  border-bottom: 1px solid rgba(200,255,0,0.3);
   padding-bottom: 2px;
   transition: border-color 0.3s ease;
 }
 
-.mj-cta:hover { border-color: #FF4FA3; }
+.mj-cta:hover { border-color: #C8FF00; }
 
 /* ===== TECH PROJECTS ===== */
 #tech-projects {
@@ -520,7 +520,7 @@ nav {
   font-family: 'Inter Tight', sans-serif;
   font-weight: 300;
   font-size: 11px;
-  color: #FF4FA3;
+  color: #C8FF00;
   letter-spacing: 0.4em;
   text-transform: uppercase;
   display: block;
@@ -617,7 +617,7 @@ nav {
   transition: all 0.3s ease;
 }
 
-.tech-btn:hover { border-color: #FF4FA3; color: #FF4FA3; }
+.tech-btn:hover { border-color: #C8FF00; color: #C8FF00; }
 
 .tech-btn-ghost {
   font-family: 'Inter Tight', sans-serif;
@@ -631,7 +631,7 @@ nav {
   transition: all 0.3s ease;
 }
 
-.tech-btn-ghost:hover { color: #FF4FA3; border-color: #FF4FA3; }
+.tech-btn-ghost:hover { color: #C8FF00; border-color: #C8FF00; }
 
 @media (max-width: 768px) {
   #tech-projects { padding: 80px 20px; }
@@ -645,5 +645,5 @@ nav {
 }
 
 #chiyo-chan, #mj-preview, #tech-projects {
-  border-top: 1px solid rgba(255, 79, 163, 0.5);
+  border-top: 1px solid rgba(200, 255, 0, 0.5);
 }
