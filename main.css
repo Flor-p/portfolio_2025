@@ -149,8 +149,14 @@ nav {
   font-size: 13px;
   letter-spacing: 0.4em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.7);
+  color: #C8FF00;
   margin: 0 0 1.75rem;
+}
+
+.hero-tagline span { white-space: nowrap; }
+
+@media (max-width: 768px) {
+  .hero-tagline { font-size: 11px; letter-spacing: 0.25em; line-height: 2; }
 }
 
 #hero .btn-hero {
